@@ -12,8 +12,8 @@
 
 | 用户意图 | 你应执行 |
 |----------|----------|
-| 需求讨论 / Discover / 先对齐需求 | PLAYBOOK §2 阶段 0；维护 `DISCOVERY.md` |
-| 范围可冻结 | 从 Discover 转入 SCOPE（阶段 1） |
+| 需求讨论 / Discover / 先对齐需求 | PLAYBOOK §2 阶段 0；维护 `DISCOVERY.md`（含模糊关键点与可选竞品速览） |
+| 范围可冻结 | 从 Discover 转入 SCOPE；冻结前关键模糊点须已拍板/假设/延后 |
 | 新项目 / Bootstrap / 初始化门禁 | PLAYBOOK §2；若缺 `docs/ai-workflow/` 先确认再 scaffold；默认从 Discover 起 |
 | 新需求 / 维护 / Bug / 变更 | PLAYBOOK §3（先只读勘察，除非小改旁路） |
 | 「只做本步」+ 贴了 Handoff | 严格按该 Handoff，结束后硬停并给出下一 Handoff |

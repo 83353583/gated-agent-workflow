@@ -35,14 +35,14 @@ If the target project lacks `docs/ai-workflow/PLAYBOOK.md`:
 
 | Intent | Flow |
 |--------|------|
-| 需求讨论 / Discover / 先对齐再开干 | Bootstrap **阶段 0** — fill `templates/discovery.md`; no business code until「范围可冻结」 |
+| 需求讨论 / Discover / 先对齐再开干 | Bootstrap **阶段 0** — fill `templates/discovery.md`（含模糊关键点与可选竞品速览）；no business code until「范围可冻结」 |
 | New product / MVP from zero | Bootstrap — PLAYBOOK §2（通常从 Discover 开始） |
 | New feature / bug / maintenance | Change Request — PLAYBOOK §3 (read-only recon first; small-fix bypass if allowed) |
 | User pasted a Handoff | Execute **only that step**, hard-stop, emit next Handoff |
 
 ## Hard gates (always)
 
-- Discover: no business code until the user confirms scope freeze (multi-turn chat OK in Discover).
+- Discover: no business code until the user confirms scope freeze (multi-turn chat OK in Discover). Critical fuzzy points must be decided, assumed (with validation), or deferred—no blank “以后再说”. Optional competitor skim is 2–3 products max, not a research report.
 - Implementation steps: no completion claim without acceptance; one step → hard stop → next Handoff.
 - No out-of-scope refactors; facts ≠ plans.
 - Do not chain many **implementation** steps in one long chat (context compression risk).
