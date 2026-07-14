@@ -49,7 +49,10 @@ If the target project lacks `docs/ai-workflow/PLAYBOOK.md`:
 
 ## Model tiers
 
-Default medium. Escalate for Discover / architecture / auth / data model / hard debugging. Record tier on the step table and Handoff.
+- **Planning** (Discover / SCOPE / step-table / stack freeze): medium-high or high.
+- **Implementation**: default medium; escalate for architecture / auth / data model / hard debugging.
+- Record tier on the step table and Handoff.
+- Business-logic implementation steps: acceptance should include at least one automated test when feasible.
 
 ## Cross-agent note
 
