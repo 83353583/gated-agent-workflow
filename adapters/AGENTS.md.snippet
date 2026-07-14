@@ -7,8 +7,9 @@
 
 - 必读：`docs/ai-workflow/PLAYBOOK.md`
 - 模板：`docs/ai-workflow/templates/`
-- 新项目 → Bootstrap；维护/新需求 → Change Request（默认先只读勘察）
-- 硬约束：可执行验收；一步一步；每步硬停；产出可复制下一 Handoff；禁止范围外重构
+- 从零：先 Discover（`DISCOVERY.md`），人类确认「范围可冻结」后再 SCOPE / 实现
+- 维护：Change Request（默认先只读勘察）
+- 硬约束：可执行验收；实现步一步一步硬停并产出下一 Handoff；禁止范围外重构
 
 若尚未生成 `docs/ai-workflow/`，先执行工作流仓库的 `scripts/scaffold-into-project.sh`，或让已安装全局 Skill 的 Agent「初始化门禁工作流」。
 ```
