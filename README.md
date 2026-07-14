@@ -68,9 +68,25 @@ bash scripts/install-claude-global.sh
 口令示例：
 
 - `初始化门禁工作流`
+- `需求讨论` / `Discover` / `范围可冻结`
 - `按 Gated Agent Workflow 新项目启动`
 - `走变更单 / 只读勘察`
 - `只做当前 Handoff，硬停并输出下一份`
+
+### 从零开一个项目，能简化到什么程度？
+
+全局 Skill 装好后，你日常可以说成：
+
+```text
+1. 建空项目目录（或让 Agent 建）
+2. 「初始化门禁工作流」
+3. 「我要做 ___，先需求讨论」→ 聊到你说「范围可冻结」
+4. 确认 SCOPE + 步骤表
+5. 按每份 Handoff 开新对话往下做
+```
+
+不必手写长流程说明，也不必开干前写完细设计。  
+**建议保留的最少门禁：** Discover 冻结 → SCOPE → 分步实现（验收 + Handoff 硬停）。
 
 ---
 
@@ -102,12 +118,12 @@ gated-agent-workflow/
 └── examples/
 ```
 
-## 两个入口
+## 两个入口（Bootstrap 含 Discover）
 
 | 入口 | 何时用 |
 |------|--------|
-| **Bootstrap（新项目启动）** | 从 0 到 MVP |
-| **Change Request（维护/新需求）** | 已有代码；默认先只读勘察 |
+| **Bootstrap**（含阶段 0 Discover） | 从 0 到 MVP：先需求讨论，再 SCOPE / 步骤 / 实现 |
+| **Change Request** | 已有代码；默认先只读勘察 |
 
 小改走 Playbook **小改旁路**，避免仪式过重。
 
