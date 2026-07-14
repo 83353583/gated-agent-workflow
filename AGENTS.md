@@ -4,17 +4,17 @@
 
 ## 必读
 
-1. 先读工作流仓库或本地副本中的 `PLAYBOOK.md`。
-2. 使用 `templates/` 下模板产出 SCOPE、步骤表、Handoff、变更单等。
-3. 遵守硬约束：可执行验收、一步一步、每步硬停、产出可复制下一 Handoff、事实与计划分离。
+1. 优先读 **`docs/ai-workflow/PLAYBOOK.md`**（scaffold 之后）。若尚未 scaffold，可读工作流仓库或全局 Skill 旁的 `PLAYBOOK.md`，并先完成初始化。
+2. 模板在 `docs/ai-workflow/templates/`（或工作流仓库 / 全局 Skill 的 `templates/`）。
+3. 硬约束：可执行验收、一步一步、每步硬停、产出可复制下一 Handoff、事实与计划分离。
 
 ## 入口
 
 | 用户意图 | 你应执行 |
 |----------|----------|
-| 新项目 / 从零开始 / Bootstrap | PLAYBOOK §2 新项目启动 |
-| 新需求 / 维护 / Bug / 变更 | PLAYBOOK §3 变更单（先只读勘察，除非小改旁路） |
-| 「只做本步」+ 贴了 Handoff | 严格按该 Handoff 执行，结束后硬停并给出下一 Handoff |
+| 新项目 / 从零开始 / Bootstrap / 初始化门禁 | PLAYBOOK §2；若缺 `docs/ai-workflow/` 先确认再 scaffold |
+| 新需求 / 维护 / Bug / 变更 | PLAYBOOK §3（先只读勘察，除非小改旁路） |
+| 「只做本步」+ 贴了 Handoff | 严格按该 Handoff，结束后硬停并给出下一 Handoff |
 
 ## 禁止
 

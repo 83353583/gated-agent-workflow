@@ -5,8 +5,10 @@
 
 本项目使用门禁式 AI 开发流程（Gated Agent Workflow）。
 
-- 必读：`docs/ai-workflow/PLAYBOOK.md`（若使用 submodule/外部仓库，改为对应路径）
+- 必读：`docs/ai-workflow/PLAYBOOK.md`
 - 模板：`docs/ai-workflow/templates/`
 - 新项目 → Bootstrap；维护/新需求 → Change Request（默认先只读勘察）
 - 硬约束：可执行验收；一步一步；每步硬停；产出可复制下一 Handoff；禁止范围外重构
+
+若尚未生成 `docs/ai-workflow/`，先执行工作流仓库的 `scripts/scaffold-into-project.sh`，或让已安装全局 Skill 的 Agent「初始化门禁工作流」。
 ```

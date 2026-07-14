@@ -1,18 +1,28 @@
-# Cursor 接入说明
+# Cursor 接入
 
-## 方式 A：项目内 Skill（推荐分享给协作者）
+## 只想当前项目用
 
-1. 将本仓库作为 submodule，或拷贝 `PLAYBOOK.md` + `templates/` 到目标项目 `docs/ai-workflow/`。
-2. 拷贝 `adapters/cursor/SKILL.md` 到目标项目 `.cursor/skills/gated-agent-workflow/SKILL.md`。
-3. 按需把 `rules-snippet.md` 做成 `.cursor/rules/gated-agent-workflow.mdc`。
-4. 根目录放置或合并 `AGENTS.md`。
+```bash
+bash /path/to/gated-agent-workflow/scripts/scaffold-into-project.sh .
+```
 
-## 方式 B：个人全局 Skill
+或拷贝 `PLAYBOOK.md` + `templates/` 到 `docs/ai-workflow/`，合并根目录 `AGENTS.md`。可选：把 `rules-snippet.md` 做成 `.cursor/rules/gated-agent-workflow.mdc`。
 
-拷贝 `adapters/cursor/SKILL.md` 到 `~/.cursor/skills/gated-agent-workflow/SKILL.md`，并在 skill 正文中写明 Playbook 的绝对路径或「先在仓库中查找 PLAYBOOK.md」。
+## 想以后项目都用（全局 Skill）
 
-## 使用口令
+```bash
+bash scripts/install-cursor-global.sh
+```
 
-- `执行 Gated Agent Workflow 新项目启动`
-- `执行 Gated Agent Workflow 变更单`
-- `只做当前 Handoff，完成后硬停并输出下一 Handoff`
+会安装到 `~/.cursor/skills/gated-agent-workflow/`（含 `SKILL.md`、`PLAYBOOK.md`、`templates/`）。
+
+Skill 正文在仓库：[`skills/gated-agent-workflow/SKILL.md`](../../skills/gated-agent-workflow/SKILL.md)。
+
+Agent 判定要用时，若项目尚未初始化，会先确认再写入 `docs/ai-workflow/`——**稳定跨会话/跨工具的是项目内文件，不是全局 Skill  alone。**
+
+## 口令
+
+- `初始化门禁工作流`
+- `按 Gated Agent Workflow 新项目启动`
+- `执行变更单` / `只读勘察`
+- `只做当前 Handoff，硬停并输出下一 Handoff`
